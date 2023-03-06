@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <% for(var i=0; i<a.length; i++) {%>
+
+            Username : <%= a[i].username%><br>
+            
+            <a style="text-decoration: none; color: black;" href=<%= a[i].username%>/adultphoto>adultphotodelete</a>: 
+
+            <% for(var j=0; j<a[i].post.adultphoto.length; j++) {%>  
+                <a style="text-decoration: none; color: black;" href=<%=a[i].username%>/adultphoto/<%= a[i].post.adultphoto[j]%>><%= a[i].post.adultphoto[j]%></a>
+            <% } %><br>
+
+            <a style="text-decoration: none; color: black;" href=<%= a[i].username%>/adultvideo>adultvideodelete</a>: 
+
+            <% for(var j=0; j<a[i].post.adultvideo.length; j++) {%>
+                <a style="text-decoration: none; color: black;" href=<%=a[i].username%>/adultvideo/<%= a[i].post.adultvideo[j]%>><%= a[i].post.adultvideo[j]%></a>
+            <% } %><br>
+
+            <a style="text-decoration: none; color: black;" href=<%= a[i].username%>/kidsphoto>kidsphotodelete</a>: 
+
+            <% for(var j=0; j<a[i].post.kidsphoto.length; j++) {%>
+                <a style="text-decoration: none; color: black;" href=<%=a[i].username%>/kidsphoto/<%= a[i].post.kidsphoto[j]%>><%= a[i].post.kidsphoto[j]%></a>
+            <% } %><br>
+
+            <a style="text-decoration: none; color: black;" href=<%= a[i].username%>/kidsvideo>kidsvideodelete</a>: 
+
+            <% for(var j=0; j<a[i].post.kidsvideo.length; j++) {%>
+                <a style="text-decoration: none; color: black;" href=<%=a[i].username%>/kidsvideo/<%= a[i].post.kidsvideo[j]%>><%= a[i].post.kidsvideo[j]%></a>
+            <% } %><br>
+
+            <br><br>
+
+     <% } %>
+
+</body>
+</html>
